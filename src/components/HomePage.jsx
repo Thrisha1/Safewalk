@@ -20,7 +20,7 @@ function HomePage() {
   
   return (
     <div className="h-full flex items-center justify-center">
-      hlo
+        hi
         { showSplash ? (
            <div className="">
              <SplashScreen />
