@@ -12,11 +12,13 @@ const Dashboard = () => {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <div className="dashboard-container">
+    <div className="dashboard-container h-screen flex flex-col justify-between">
       <Header />
-      <MapView hgt="h-[400px]" />
-      <TrackMeButton />
-      <BottomNav openModal={openModal} />
+      <MapView />
+      <div className="">
+        <TrackMeButton />
+        <BottomNav openModal={openModal} />
+      </div>
       {/* Render the modal */}
       {isModalOpen && (
         <ReportCrimeModal
