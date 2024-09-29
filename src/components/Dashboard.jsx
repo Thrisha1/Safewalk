@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import Header from "./Header.jsx";
 import MapView from "./MapView";
 import BottomNav from "./BottomNav";
-import TrackMeButton from "./TrackMeButton";
+import TrackMeButton from "./TrackmeButton.jsx";
 import ReportCrimeModal from "./ReportCrimeModal";
 
 const Dashboard = () => {
