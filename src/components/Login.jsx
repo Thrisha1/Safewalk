@@ -77,12 +77,12 @@ function LoginSignupPage() {
       </div>
 
       {/* Login with Email Option */}
-      <div className="w-4/5 mt-4">
+      {/* <div className="w-4/5 mt-4">
         <p className="text-sm text-center text-gray-500">Already have an account?</p>
         <button className="w-full py-2 mt-2 bg-white text-purple-600 border border-purple-400 font-semibold rounded-lg hover:bg-gray-50 transition duration-200">
           Log In with Email
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }

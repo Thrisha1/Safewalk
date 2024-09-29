@@ -4,6 +4,7 @@ import MapView from "./MapView";
 import BottomNav from "./BottomNav";
 import TrackMeButton from "./TrackmeButton.jsx";
 import ReportCrimeModal from "./ReportCrimeModal";
+import { Toaster } from "react-hot-toast";
 
 const Dashboard = () => {
   // reportmodal

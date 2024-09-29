@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import supabase from '../../supabase'
+import toast, { Toaster } from 'react-hot-toast';
+import supabase from '../../supabase';
 
 const TrackMeButton = () => {
     const [loading, setLoading] = useState(false);
@@ -8,10 +9,8 @@ const TrackMeButton = () => {
         console.log("Share location");
         setLoading(true);
 
-
-        const { data: { user } } = await supabase.auth.getUser()
+        const { data: { user } } = await supabase.auth.getUser();
         const { id: userId } = user;
-
 
         try {
             // Step 1: Fetch contact number from Supabase
@@ -25,10 +24,15 @@ const TrackMeButton = () => {
             if (error) {
                 console.error("Error fetching contact number:", error);
                 setLoading(false);
+            }
+            const contactNumber = data?.contactNumber; // Use optional chaining
+
+            // Check if contactNumber exists
+            if (!contactNumber) {
+                toast.error("You have no friends. Please add a friend to share your location."); // Show toast message
+                setLoading(false);
                 return;
             }
-
-            const contactNumber = data.contactNumber;
 
             // Step 2: Get user's current location
             navigator.geolocation.getCurrentPosition(
@@ -55,6 +59,7 @@ const TrackMeButton = () => {
 
     return (
         <div className="flex justify-center py-4">
+            <Toaster />
             <button
                 onClick={handleShareLocation}
                 className="bg-green-500 text-white py-2 px-8 rounded-full shadow-lg hover:bg-green-600 transition"
