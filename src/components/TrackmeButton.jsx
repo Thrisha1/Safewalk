@@ -41,7 +41,7 @@ const TrackMeButton = () => {
 
                     // Step 3: Open WhatsApp with pre-filled message
                     const message = `Hey, I am here: https://www.google.com/maps?q=${latitude},${longitude}`;
-                    const whatsappUrl = `https://wa.me/${contactNumber}?text=${encodeURIComponent(message)}`;
+                    const whatsappUrl = `https://wa.me/+91${contactNumber}?text=${encodeURIComponent(message)}`;
 
                     window.open(whatsappUrl, '_blank');
                     setLoading(false);
