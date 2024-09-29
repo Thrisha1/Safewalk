@@ -81,7 +81,7 @@ const MapView = () => {
   }, []);
 
   return (
-    <div className="h-[87%]">
+    <div className="h-[67%]">
       <Toaster /> {/* Include the Toaster component */}
       <div
         ref={mapContainerRef}
