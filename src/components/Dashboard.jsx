@@ -15,7 +15,7 @@ const Dashboard = () => {
     <div className="dashboard-container h-screen flex flex-col justify-between">
       <Header />
       <MapView />
-      <div className="">
+      <div className="fixed bottom-0 w-full z-10">
         <TrackMeButton />
         <BottomNav openModal={openModal} />
       </div>
