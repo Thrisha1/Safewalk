@@ -85,7 +85,7 @@ const MapView = () => {
       <Toaster /> {/* Include the Toaster component */}
       <div
         ref={mapContainerRef}
-        className="w-full overflow-hidden"
+        className="w-full h-[95%] overflow-hidden"
       />
     </div>
   );
